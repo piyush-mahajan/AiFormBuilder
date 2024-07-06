@@ -1,7 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { UserButton, useUser } from "@clerk/nextjs";
+// import { Button } from "D:\done project\AIFormBuilder\my-";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -11,12 +13,20 @@ const Header = () => {
       <div className="flex items-center justify-between">
         <Image src={"/logo.svg"} width={180} height={50}></Image>
         {isSignedIn ? (
-          <div>
-            <Button variant="outline">Dashboard</Button>
+          <div className="flex items-center gap-5">
+            <Link href={"/dashboard"}>
+              <Button
+              //   variant="outline"
+              >
+                Dashboard
+              </Button>
+            </Link>
             <UserButton></UserButton>
           </div>
         ) : (
-          <Button>Get Started</Button>
+          <SignInButton>
+            <Button>Get Started</Button>
+          </SignInButton>
         )}
       </div>
     </div>
