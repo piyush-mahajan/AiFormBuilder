@@ -1,6 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
-// import { Button } from "D:\done project\AIFormBuilder\my-";
 import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,17 +13,13 @@ const Header = () => {
         {isSignedIn ? (
           <div className="flex items-center gap-5">
             <Link href={"/dashboard"}>
-              <Button
-              //   variant="outline"
-              >
-                Dashboard
-              </Button>
+              <button class="btn btn-active btn-neutral">Dashboard</button>
             </Link>
             <UserButton></UserButton>
           </div>
         ) : (
           <SignInButton>
-            <Button>Get Started</Button>
+            <button class="btn btn-active btn-neutral">Get Started</button>
           </SignInButton>
         )}
       </div>

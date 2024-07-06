@@ -35,7 +35,7 @@ const SideNav = () => {
     },
   ];
   return (
-    <div className="h-screen shadow-md border ">
+    <div className="h-screen shadow-md border bg-white ">
       <div className="p-5">
         {menuList.map((menu, index) => (
           <h2
