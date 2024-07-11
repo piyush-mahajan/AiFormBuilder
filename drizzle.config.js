@@ -5,6 +5,6 @@ export default defineConfig({
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {
-    url: process.env.NEXT_PUBLIC_DATABASE_URL_CONFIG,
+    url: "postgresql://neondb_owner:luQR6LhzyM1T@ep-falling-sea-a54ot0he.us-east-2.aws.neon.tech/AI-Form-Builder?sslmode=require",
   },
 });
